@@ -1,6 +1,6 @@
 #include <xc.h>
 #define _XTAL_FREQ 4000000
-#define ADC_MAX  1024
+#define ADC_MAX  1023
 void initPWM1ms ()
 {
       PR2 = 61; //  perioada PWM 1ms
