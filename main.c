@@ -1,6 +1,6 @@
 #include <xc.h>
 #define _XTAL_FREQ 4000000
-#define ADC_MAX  255
+#define ADC_MAX  1024
 void initPWM1ms ()
 {
       PR2 = 61; //  perioada PWM 1ms
@@ -25,7 +25,7 @@ void main(void)
    TRISA  = 1; //porta intrare pentru potentiometru
    TRISC  = 0;  //portc iesire pentru rotatie motor
    TRISB  = 1;  //portb intrare pentru buton
-   ADCON0 = 0b10000001; //10 freq osc, 0000-caanal0(AN0), 01-final conversie si activare modul 
+   ADCON0 = 0b10000001; //10 freq osc, 0000-caanal0(AN0), 01-final conversie si activare modul adcon 
    initPWM1ms ();
     
    while (1)
